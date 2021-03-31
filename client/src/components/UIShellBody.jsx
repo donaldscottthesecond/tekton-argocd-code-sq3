@@ -12,6 +12,7 @@ import MasterDetail from "../pattern-components/MasterDetail";
 import CreateReadUpdateDelete from "../pattern-components/CreateReadUpdateDelete";
 import SearchList from "../pattern-components/SearchList";
 import SearchForm from "../pattern-components/SearchForm";
+import GorceryList from '../pattern-components/GroceryList';
 import "../pattern-components/patterns.scss";
 
 class UIShellBody extends Component {
@@ -27,6 +28,7 @@ class UIShellBody extends Component {
     "Linked List": LinkedList,
     "Master Detail": MasterDetail,
     "Create, Read, Update, Delete": CreateReadUpdateDelete,
+    "Grocery List": GorceryList,
     "Search List": SearchList,
     "Search Form": SearchForm
   };
