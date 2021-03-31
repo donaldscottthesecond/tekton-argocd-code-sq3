@@ -30,8 +30,8 @@
   "author": "IBM Garage for Cloud",
   "license": "ISC",
   "dependencies": {
-    "client": "file:./client",
     "body-parser": "^1.17.2",
+    "client": "file:./client",
     "cookie-parser": "^1.4.3",
     "express": "^4.15.3",
     "express-http-proxy": "^1.6.0",
@@ -42,7 +42,7 @@
   "devDependencies": {
     "@types/node": "^11.13.19",
     "nodemon": "^1.12.1",
-    "supertest": "^4.0.2",
-    "sonarqube-scanner": "^2.5.0"
+    "sonarqube-scanner": "^2.5.0",
+    "supertest": "^4.0.2"
   }
 }
