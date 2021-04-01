@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const list_directory = path.join('./', 'grocery_lists');
+const list_directory = path.join('/tmp', 'grocery_lists');
 
 function save_list(list_obj)
 {
