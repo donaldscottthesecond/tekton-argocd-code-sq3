@@ -12,7 +12,7 @@ import MasterDetail from "../pattern-components/MasterDetail";
 import CreateReadUpdateDelete from "../pattern-components/CreateReadUpdateDelete";
 import SearchList from "../pattern-components/SearchList";
 import SearchForm from "../pattern-components/SearchForm";
-import GroceryList from '../pattern-components/GroceryList';
+import GroceryListItems from '../pattern-components/GroceryListItems';
 import "../pattern-components/patterns.scss";
 
 class UIShellBody extends Component {
@@ -28,7 +28,7 @@ class UIShellBody extends Component {
     "Linked List": LinkedList,
     "Master Detail": MasterDetail,
     "Create, Read, Update, Delete": CreateReadUpdateDelete,
-    "Grocery List": GroceryList,
+    "Grocery Lists": GroceryListItems,
     "Search List": SearchList,
     "Search Form": SearchForm
   };

@@ -25,6 +25,8 @@ class GroceryValidatingForm extends Component {
         groceryItem: dataToLoad.GroceryItem,
         groceryQuantity: dataToLoad.GroceryQuantity,
         groceryUnit: dataToLoad.GroceryUnit[0],
+        addedBy: dataToLoad.addedBy,
+        updatedBy: dataToLoad.updatedBy,
       };
     }
   }
@@ -39,6 +41,8 @@ class GroceryValidatingForm extends Component {
         groceryItem: dataToLoad.GroceryItem,
         groceryQuantity: dataToLoad.GroceryQuantity,
         groceryUnit: dataToLoad.GroceryUnit[0],
+        addedBy: dataToLoad.addedBy,
+        updatedBy: dataToLoad.updatedBy,
       });
     }
   }
@@ -87,6 +91,14 @@ class GroceryValidatingForm extends Component {
       this.setState({ groceryUnitInvalid: true });
       checkFlag = false;
     }
+    if (!this.state.addedBy) {
+      this.setState({ addedByInvalid: true });
+      checkFlag = false;
+    }
+      if (!this.state.updatedBy) {
+      this.setState({ updatedByInvalid: true });
+      checkFlag = false;
+    }
     return checkFlag;
   };
 
@@ -97,6 +109,8 @@ class GroceryValidatingForm extends Component {
         groceryItem: this.state.groceryItem,
         groceryQuantity: this.state.groceryQuantity,
         groceryUnit: this.state.groceryUnit,
+        addedBy: this.state.addedBy,
+        updatedBy: this.state.updatedBy,
       };
       if (typeof this.props.updateRow === "function") {
         this.props.updateRow(dataToSave);
@@ -164,6 +178,30 @@ class GroceryValidatingForm extends Component {
                 {this.state.groceryUnitInvalid && (
                   <p className="dropdown-invalid">Please select the unit</p>
                 )}
+                <br />
+                <br />
+                <TextInput
+                  id="addedBy"
+                  name="addedBy"
+                  value={this.state.addedBy || ""}
+                  onChange={this.saveData}
+                  labelText="Added By"
+                  maxLength="200"
+                  invalid={this.state.addedByInvalid}
+                  invalidText="Added by.."
+                />
+                <br />
+                <br />
+                <TextInput
+                  id="updatedBy"
+                  name="updatedBy"
+                  value={this.state.updatedBy || ""}
+                  onChange={this.saveData}
+                  labelText="Updated By"
+                  maxLength="200"
+                  invalid={this.state.updatedByInvalid}
+                  invalidText="Updated by.."
+                />
                 <br />
                 <br />
                 <div className="left-align">
